@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+## Nostr playground for learning and testing things out
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Why Nostr?
 
-Currently, two official plugins are available:
+Bitcoin has shown the power of public key cryptography to give users greater control and ownership over their digital lives. Similarly, Nostr embodies the principles that Bitcoin was founded on: decentralization, censorship resistance, privacy, and individual sovereignty. To understand why Nostr is important we must understand how these principles apply to Nostr.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Decentralization
 
-## Expanding the ESLint configuration
+Bitcoin removes the need for centralized financial intermediaries, and Nostr does the same for online communication. Platforms like Twitter or Facebook centralize control over user data, content moderation, and algorithms. Nostr decentralizes this by relying on a network of relays, making it impossible for any single entity to control or censor communication.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Censorship resistance
 
-- Configure the top-level `parserOptions` property like this:
+On Nostr, censorship is difficult because users can self-host relays (which we hope to do soon) and interact with any number of independent relays of their choosing. Also, cryptographic signatures ensure the integrity of messages, preventing tampering or impersonation.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Privacy and Pseudonymity
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+You don't need to sign up with an email, phone, or any other personally indentifiable information. There is no central authority issuing keys or identities.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Open source
